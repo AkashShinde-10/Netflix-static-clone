@@ -1,0 +1,398 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+  background: #000;
+  color: #fff;
+}
+
+.header{
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(Assets/Images/Netflix_BG.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding: 10px 8%;
+}
+
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.logo{
+  width: 130px;
+  cursor: pointer;
+}
+
+nav button{
+  border: 0;
+  outline: 0;
+  background: #db0001;
+  color: #fff;
+  padding: 7px 20px;
+  font-size: 12px;
+  border-radius: 4px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.language-btn{
+  display: inline-flex;
+  align-items: center;
+  background: transparent;
+  border: 1px solid #fff;
+  padding: 7px 10px;
+  color: #fff;
+}
+
+.language-btn img{
+  width: 10px;
+  margin-left: 10px;
+}
+
+.header-content{
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  margin-top: 100px;
+}
+
+.header-content h1{
+  font-size: 50px;
+  line-height: 60px;
+  font-weight: 600;
+  max-width: 650px;
+}
+
+.header-content h3{
+  font-weight: 400;
+  margin: 20px 0;
+}
+
+.email-signup{
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  overflow: hidden;
+  justify-content: center;
+}
+
+.email-signup input{
+  flex: 1;
+  color: #fff;
+  background: transparent;
+  border: 1px solid #fff;
+  outline: 0;
+  height: 3rem;
+  border-radius: 4px;
+  padding: 0 15px
+}
+
+.email-signup button{
+  background: #db0001;
+  border: 0;
+  outline: 0;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  height: 3rem;
+  padding: 0 30px;
+  margin-left: 20px;
+  border-radius: 4px;
+}
+ 
+/*--------- Features -------*/
+
+.features{
+  padding: 50px 12%;
+  font-size: 22px;
+}
+
+.row{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 30px 0;
+  justify-content: space-around;
+}
+
+.text-col, .img-col{
+  flex-basis: 50%;
+  margin-bottom: 20px;
+}
+
+.img-col img{
+  display: block;
+  width: 90%;
+  margin: auto;
+}
+
+.text-col{
+  text-align: start;
+  width: 50%;
+  margin-right: auto;
+}
+
+.text-col h2{
+  font-size: 40px;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.text-col p{
+  font-size: 22px;
+  text-align: center;
+  word-spacing: 2px;
+  margin-left: 10px;
+}
+
+.row-rev{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 50px 0;
+}
+
+.quetions{
+  padding: 10px 12%;
+  text-align: center;
+  font-size: 18px;
+  margin: 20px auto;
+}
+
+.quetions h2{
+  font-weight: 500;
+  font-size: 40px;
+}
+
+.quetions h3{
+  font-weight: 300;
+}
+
+.accord{
+  margin: 40px auto 50px;
+  width: 100%;
+  max-width: 90%;
+}
+
+.accord li{
+  list-style: none;
+  width: 100%;
+  padding: 5px;
+}
+
+.accord li label{
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  font-size: 18px;
+  font-weight: 500;
+  background: #303030;
+  margin-bottom: 2px;
+  cursor: pointer;
+  position: relative;
+}
+
+label::after{
+  content: '+';
+  font-size: 34px;
+  position: absolute;
+  right: 20px;
+  transition: transform 0.5s;
+}
+
+input[type="radio"]{
+  display: none;
+}
+
+.accord .que-ans{
+  background: #303030;
+  text-align: left;
+  padding: 0 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s, padding 0.5s;
+}
+
+.accord input[type="radio"]:checked + label + .que-ans{
+  max-height: 600px;
+  padding: 30px 20px;
+}
+
+.accord input[type="radio"]:checked + label::after{
+  transform: rotate(135deg);
+}
+
+.footer{
+  padding: 50px 15% 10px;
+  
+}
+
+.footer h2{
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+.footer-links{
+  display: flex;
+}
+
+.footer-links .col1{
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+}
+
+.col1 .col{
+  flex-basis: 50%;
+}
+
+.col2 .col{
+  flex-basis: 50%;
+}
+
+.footer-links .col2{
+  width: 50%;
+  display: flex;
+}
+
+.footer .col{
+  flex-basis: 25%;
+  flex-grow: 1;
+  margin-bottom: 20px;
+}
+
+.footer .col a{
+  display: block;
+  color:#777;
+  font-size: 14px;
+  margin-bottom:10px ;
+}
+
+@media (max-width:600px) {
+  .logo{
+    width: 90px;
+  }
+
+  .header-content{
+    top: 45%;
+  }
+
+  .header-content h1{
+    font-size: 45px;
+    line-height: 40px;
+    font-weight: 550;
+    max-width: 650px;
+  }
+
+  .header button{
+    padding: 7px 8px;
+  }
+
+  .header .language-btn{
+    padding: 5px 6px;
+  }
+
+  .email-signup{
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .email-signup button{
+    margin: 10px 20px;
+    height: 2.3rem;
+   
+  }
+
+  .email-signup input{
+    padding: 15px 15px;
+    width: 100%;
+  }
+
+  .text-col h2{
+    font-size: 33px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 18px;
+  }
+  
+  .text-col p{
+    font-size: 19px;
+    text-align: center;
+    word-spacing: 1px;
+    margin-left: 10px;
+  }
+
+  .quetions h2{
+    font-weight: 400;
+    font-size: 30px;
+  }
+
+  .quetions h3{
+    font-size: 16px;
+    font-weight: 200;
+  }
+
+  .accord li label{
+    font-size: 14px;
+    font-weight: 300;
+  }
+
+  label::after{
+    font-size: 20px;
+  }
+
+  
+.footer h2{
+  font-size: 14px;
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+
+  .footer .col{
+    flex-basis: 50%;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-wrap: wrap;
+  }
+
+  .footer-links .col1{
+    flex-direction: column;
+  }
+  
+  .footer-links .col2{
+    flex-direction: column;
+  }
+
+  .row{
+    flex-direction:column;
+  }
+
+  .row-rev{
+    flex-direction: column-reverse;
+  }
+
+  .text-col{
+    width: 100%;
+  }
+}
+
+@media (max-width:720px) {
+  
+
+  
+}
